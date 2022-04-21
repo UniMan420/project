@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            table, th, td {
+            border:1px solid black;
+            }
+            ul, #myUL {
+            list-style-type: none;
+            }
+            #myUL {
+            margin: 0;
+            padding: 0;
+            }
+            .caret {
+            cursor: pointer;
+            -webkit-user-select: none; /* Safari 3.1+ */
+            -moz-user-select: none; /* Firefox 2+ */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none;
+            }
+            .caret::before {
+            content: "\25B6";
+            color: black;
+            display: inline-block;
+            margin-right: 6px;
+            }
+            .caret-down::before {
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -webkit-transform: rotate(90deg); /* Safari */'
+            transform: rotate(90deg);  
+            }
+            .nested {
+            display: none;
+            }
+            .active {
+            display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Blueprint</h2>
+        <ul id="myUL">
+            <li>
+                <span class="caret"><b>What will we make? What problem will it be solving? How much value will it be providing?</b></span>
+                <ul class="nested">
+                    <li>Before we move on, read this :
+                        <a href = https://en.wikipedia.org/wiki/Distributed_computing>Distributed_computing,</a>
+                        <a href = https://computer.howstuffworks.com/shared-computing.htm>How it works</a>
+                    </li>
+                    <li>
+                        <span class="caret"><b>What will we make?</b></span>
+                        <ul class="nested">
+                            <li>An OS capable of sharing the resources of hardware it's running on.<br>
+                                Our end goal is to unite the embedded world.<br>
+                                It's currently not possible to just fetch any 2 computers and couple them together for `net` better performance. <br>
+                                Any type of embedded system running our OS will be able to share its or "DONATE" its computational power for solving a greater problem.
+                                (this is just the first part of our product, if we want to provide `real` value, we would need to solve a few more problems, which we will do by proving customizable hardware and also must keep figuring out the fastest way possible to send data over a cable)
+                            </li>
+                        </ul>
+                        <br>
+                    <li>
+                        <span class="caret"><b>What problem will it be solving?</b></span>
+                        <ul class="nested">
+                            <li>
+                                >No wastage of processing power: just keep adding onto more, you can now DONATE processing power. Whenever new and improvised systems are bought for better performance. old ones processing power will no longer be needed to be wasted, you will always `+`add onto on your `net` processing power<br>>Improvised and better performance is possible with such Architecture
+                            </li>
+                            <span class="caret"><b>How?</b></span>
+                            <ul class="nested">
+                                2x4GB > 1x8GB
+                            </ul>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="caret"><b>How much value will it be providing?</b></span>
+                        <ul class="nested">
+                            <li>
+                                iska list to khtm he nahi hoga, isko ekbar skip karo
+                            </li>
+                        </ul></li></li></ul>
+                    <li>
+                        <span class="caret"><b>Is it even possible? What the heck we talking about here?</b></span>
+                        <ul class="nested">
+                            <li>
+                                Actually, its already being used, but there are two things the current technology lacks:<br>
+                                Its Un-standardized(has a very minute set for use): Therefore ~THE(our) OS~ <br>
+                                It's not on the level(from lowest to highest systems) we are dealing with
+                            </li>
+                        </ul>
+                    <li>
+                        <span class="caret"><b>How will we build the OS?</b></span>
+                        <ul class="nested">
+                            <li>
+                                Obviously not from scratch. Forking a Linux distro, we have a lot of added advantages. As Linux already being market standard, people will have no reason `Not to switch to us already`
+                            <li>
+                                <span class="caret"><b>How will it share resources?</b></span>
+                                <ul class="nested">
+                                    <li>
+                                        >Read first:
+                                        <a href="https://en.wikipedia.org/wiki/Hypervisor">Hypervisor</a><br>
+                                        A Hypervisor Divides a single computing resource into multiple useable computers.
+                                        Since we talking about OS-level development, bare-metal Hypervisor do exists.
+                                        Our job is to figure out how to reverse it. If a single CPU can process tasks from multiple OSs, It must be possible for multiple CPUs(running the same OS) to process tasks coming through a `Network`
+                                        Hypervisor divides, we need to unite
+                                        To implement this, we would need to deep dive into how bare-metal Hypervisor divides its computing resources
+                                        <table >
+                                            <tr>
+                                                <th>Hypervisor</th>
+                                                <th>Us</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Divides Computing Power/Resources</td>
+                                                <td>Unites</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Has certain harware prerequistes to be implemented(need to support hardware virtualization)</td>
+                                                <td>All hardware needs to have our OS for it to work(independent of hardware)</td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    <br>
+                                    >(To be) Read (and understood):
+                                    <a href="https://en.wikipedia.org/wiki/Remote_procedure_call">RPC,</a>
+                                    <a href=
+                                        "https://towardsdatascience.com/lets-build-a-simple-distributed-computing-system-for-modern-cloud-part-one-e2b745126211">
+                                    ( an example of how RPC is being used for shared computing)
+                                    </a>
+                                </ul>
+                            <li>
+                                <span class="caret"><b>Our OS Architecture?</b></span>
+                                <ul class="nested">
+                                    <li>
+                                        parallel processing is what this world has to offer has before we make our start
+                                        ( we would probably use this https://en.wikipedia.org/wiki/Unified_Parallel_C )
+                                        But Parallel Proc. has a lot of limited use cases and sometimes it even slows the program if implemented unnecessarily.
+                                        We `may`, no, probably need to come up with our own Algorithm for better processing of data between different CPUs
+                                        Read the index 7 of <a href="https://en.wikipedia.org/wiki/Distributed_computing">this</a>
+                                    </li>
+                                </ul>
+                            </li><li>
+                            <span class="caret"><b>Some resources(technologies) I found but are left to properly understand:</b></span>
+                            <ul class="nested">
+                                <li>
+                                    <a href="https://en.wikipedia.org/wiki/Open_Source_Cluster_Application_Resources">OSCAR</a><br>
+                                    <a href="https://www.linux-kvm.org/page/Main_Page">KVM</a><br>(Thank god its Linux)
+                                </li>
+                            </ul>
+                            </li>
+                            </li>
+                            </li></li></li></li>
+                        </ul>
+                        <br><li>
+                        <span class="caret"><b>Things/skiils/concepts we would need to learn</b></span>
+                        <ul class="nested">
+                            <li><b>Linux</b> - at the level of Kernel itself</li>
+                            <li><b> Computer Architecture</b> - need to learn how multiple CPUs on single board work, and more..</li>
+                            <li><b> Computer Networking</b> - Security concerns and Process'ement Transfer</li>
+                            <li><b> Shared Computing</b> and <b> Cluster computing</b></li>
+                            <li> and possily more </li>
+                          <li>We NEED MORE MEMBERS, NOT POSSIBLE WITH JUST 3</li></ul>
+                          <li>
+                            <span class="caret"><b>Things we would need to figure out:</b></span>
+                            <ul class="nested">
+                              <li>Best Algo for the board</li>
+                              <li>USB-C? Thunderbolt? "OUR OWN?" ~ kind of we have to, at some point</li>
+                              <li>Customizeable upgradeable hardware...Aman please explain :D</li></ul>
+                              <li>
+                              <span class="caret"><b>Some already deployed examples:</b></span>
+                              <ul class="nested">
+                                <li>Read point<a href="https://computer.howstuffworks.com/shared-computing.htm"> Shared Computing Application</a></li>
+                                <li>Nvidia's SLI and AMD's Crossfire are also a good examples</li></ul></li>
+                        </ul>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            var toggler = document.getElementsByClassName("caret");
+            var i;
+            
+            for (i = 0; i < toggler.length; i++) {
+              toggler[i].addEventListener("click", function() {
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+              });
+            }
+        </script>
+    </body>
+</html>
